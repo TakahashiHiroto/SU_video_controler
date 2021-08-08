@@ -1,0 +1,21 @@
+{
+    "name":"my_first_chrome_extensions",
+    "version":"1.0.0",
+    "manifest_version":2,
+    "content_scripts":[
+        {
+            "matches":["<all_urls>"],
+            "js":["scripts/content-scripts.js"]
+        }
+    ],
+    "background":{
+        "scripts":[
+            "scripts/background.js"
+        ],
+        "persistent":false
+    },
+    "browser_action":{
+        "default_popup":"popup.html"
+    },
+    "permissions":["tabs"]
+}
