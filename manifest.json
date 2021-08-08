@@ -17,13 +17,13 @@
     },
     "browser_action":{
         "default_popup":"popup.html",
-        "default_icon": "32.png",
+        "default_icon": "image/32.png",
         "default_title":"SU_video_speed_controler"
     },
     "permissions":["tabs"],
     "icons": {
-        "32": "32.png",
-        "48": "48.png",
-        "128": "128.png"
+        "32": "image/32.png",
+        "48": "image/48.png",
+        "128": "image/128.png"
     }
 }
