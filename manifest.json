@@ -1,6 +1,7 @@
 {
     "name":"my_first_chrome_extensions",
     "version":"1.0.0",
+    "discription":"This is my first chrome extension. This can change the speed of the video of SU.",
     "manifest_version":2,
     "content_scripts":[
         {
@@ -15,7 +16,14 @@
         "persistent":false
     },
     "browser_action":{
-        "default_popup":"popup.html"
+        "default_popup":"popup.html",
+        "default_icon": "32.png",
+        "default_title":"SU_video_speed_controler"
     },
-    "permissions":["tabs"]
+    "permissions":["tabs"],
+    "icons": {
+        "32": "32.png",
+        "48": "48.png",
+        "128": "128.png"
+    }
 }
