@@ -5,8 +5,8 @@ setTimeout(function () {
     console.log(frameDocument);
     let Rate = frameDocument.getElementById('video').playbackRate; 
     chrome.runtime.sendMessage({
-        "playbackRate": Rate 
-    })
+        "playbackRate": Rate
+    });
 },1000);
 
 
@@ -14,15 +14,16 @@ setTimeout(function () {
 chrome.runtime.onMessage.addListener(
     function(message, sender, sendResponse) {
         if(isNaN(message)){
-            if(message == 'play'){
+            if(message == 'pause'){
                 document.getElementsByName('webclass_content')[0].contentDocument.getElementById('video').play();
+                console.log(message);
                 return;
             }
-            else if(message = 'pause'){
+            else if(message = 'play'){
                 document.getElementsByName('webclass_content')[0].contentDocument.getElementById('video').pause();
+                console.log(message);
                 return;
             }
-            console.log(message);
             return;
         }
         else{

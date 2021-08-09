@@ -4,12 +4,27 @@ body{
     margin: 0;
     padding: 0;
 }
+
 button{
     display: inline;
     height: 50px;
     width: 28%;
-    box-shadow: 3px;
-    text-shadow: 3px;
+    box-shadow: -3px -3px rgb(85, 85, 85);
+    text-shadow: 0.5px 0.5px rgb(194, 187, 187);
+    font-size: 15px;
+    background-color: black;
+    font-style: italic;
+    color:white;
+    padding: 10px;
+    margin: 1.5%;
+}
+
+button:active{
+    left:4px;
+    top:4px;
+    display: inline;
+    height: 50px;
+    width: 28%;
     font-size: 15px;
     background-color: black;
     font-style: italic;
