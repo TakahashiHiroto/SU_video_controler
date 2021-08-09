@@ -1,6 +1,6 @@
 body{
     width: 400px;
-    height: 500px;
+    height: 200px;
     margin: 0;
     padding: 0;
 }
@@ -31,4 +31,10 @@ button:active{
     color:white;
     padding: 10px;
     margin: 1.5%;
+}
+
+div{
+    margin: 1.5%;
+    font-size: 25px;
+    padding: 10px;
 }

@@ -26,10 +26,13 @@ chrome.runtime.onMessage.addListener(
             }
             return;
         }
+        else if( Math.abs(message) == 10){
+            document.getElementsByName('webclass_content')[0].contentDocument.getElementById('video').currentTime += message;
+        }
         else{
             console.log('clickを感知');
-            console.log('現在の再生速度：'+message+'倍');
-            document.getElementsByName('webclass_content')[0].contentDocument.getElementById('video').playbackRate = message;
+            console.log('現在の再生速度：'+ (1 + message)+'倍');
+            document.getElementsByName('webclass_content')[0].contentDocument.getElementById('video').playbackRate = 1 + message;
         }
         
         return true; //←これ不必要？
