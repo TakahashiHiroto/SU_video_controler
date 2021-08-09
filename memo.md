@@ -5,3 +5,5 @@
 
 ※getBackgroundPageで変数をpopup.jsに持ってくるときは、let or constで定義されたものは持ってこれない。(varで定義された変数でないとダメ)
 ※webclassのようにframeタグ内のdocumentオブジェクト内の要素をいじるときはcontentDocument or contentWindow.documentで指定しなくてはならない。[参照記事はこちら](https://shanabrian.com/web/javascript/element-contentdocument.php)
+
+※複数のメッセージをおくる事は不可能な気がする。(tabsを見た感じ。)ただjson形式で複数のデータを送り、content.js側でif分ならなんやらで場合け→forEachとかif文で回せば色々と出来そう。

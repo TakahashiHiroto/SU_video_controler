@@ -1,7 +1,7 @@
 {
     "name":"my_first_chrome_extensions",
     "version":"1.0.0",
-    "discription":"This is my first chrome extension. This can change the speed of the video of SU.",
+    "description":"This is my first chrome extension. This can change the speed of the video of SU.",
     "manifest_version":2,
     "content_scripts":[
         {

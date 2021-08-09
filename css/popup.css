@@ -1,0 +1,19 @@
+body{
+    width: 400px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+}
+button{
+    display: inline;
+    height: 50px;
+    width: 28%;
+    box-shadow: 3px;
+    text-shadow: 3px;
+    font-size: 15px;
+    background-color: black;
+    font-style: italic;
+    color:white;
+    padding: 10px;
+    margin: 1.5%;
+}
