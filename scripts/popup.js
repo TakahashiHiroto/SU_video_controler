@@ -9,9 +9,7 @@ function sendPlaybackrate_up(){
     rate_counter += 0.1;
     let RATE = date.playbackRate + rate_counter;
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-        chrome.tabs.sendMessage(tabs[0].id, 
-            RATE
-            );
+        chrome.tabs.sendMessage(tabs[0].id, RATE); //第二引数は送る要素
     });    
 }
 
@@ -19,9 +17,7 @@ function sendPlaybackrate_down(){
     rate_counter -= 0.1;
     let RATE = date.playbackRate + rate_counter;
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-        chrome.tabs.sendMessage(tabs[0].id, 
-            RATE
-            );
+        chrome.tabs.sendMessage(tabs[0].id, RATE);
     });    
 }
 
@@ -33,6 +29,9 @@ function video_pause(){
     else{
         video_now = "pause";
     }
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        chrome.tabs.sendMessage(tabs[0].id, video_now);
+    });
     document.getElementById('button3').innerHTML = video_now;   
 }
 

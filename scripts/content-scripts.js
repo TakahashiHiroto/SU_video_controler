@@ -3,10 +3,9 @@ setTimeout(function () {
     let frame = document.getElementsByName('webclass_content');
     let frameDocument = frame[0].contentDocument || frame[0].contentWindow.document;
     console.log(frameDocument);
-    let Rate = frameDocument.getElementById('video').playbackRate;
+    let Rate = frameDocument.getElementById('video').playbackRate; 
     chrome.runtime.sendMessage({
-        "playbackRate": Rate,
-        "video_now": "anpanman"
+        "playbackRate": Rate 
     })
 },1000);
 
@@ -15,6 +14,15 @@ setTimeout(function () {
 chrome.runtime.onMessage.addListener(
     function(message, sender, sendResponse) {
         if(isNaN(message)){
+            if(message == 'play'){
+                document.getElementsByName('webclass_content')[0].contentDocument.getElementById('video').play();
+                return;
+            }
+            else if(message = 'pause'){
+                document.getElementsByName('webclass_content')[0].contentDocument.getElementById('video').pause();
+                return;
+            }
+            console.log(message);
             return;
         }
         else{
@@ -22,7 +30,8 @@ chrome.runtime.onMessage.addListener(
             console.log('現在の再生速度：'+message+'倍');
             document.getElementsByName('webclass_content')[0].contentDocument.getElementById('video').playbackRate = message;
         }
-        return true; //←これ地味に大切かも
+        
+        return true; //←これ不必要？
 });
 
 
