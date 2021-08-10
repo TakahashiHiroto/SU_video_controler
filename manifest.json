@@ -20,7 +20,7 @@
         "default_icon": "image/32.png",
         "default_title":"SU_video_speed_controler"
     },
-    "permissions":["tabs","storage"],
+    "permissions":["tabs","storage","https://webclass.gks.saitama-u.ac.jp/webclass/*"],
     "icons": {
         "32": "image/32.png",
         "48": "image/48.png",

@@ -6,7 +6,6 @@ let date = chrome.extension.getBackgroundPage().test_value;
 
 // 現在アクティブなタブにデータを送信
 function Rate_up_little(){
-    console.log(date);
     rate_counter += 0.1;
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         chrome.tabs.sendMessage(tabs[0].id, rate_counter); //第二引数は送る要素
