@@ -9,7 +9,7 @@ function Rate_up_little(){
     rate_counter += 0.1;
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         chrome.tabs.sendMessage(tabs[0].id, rate_counter); //第二引数は送る要素
-        document.getElementById('now').innerHTML = "Now playbackRate:" + (1 + rate_counter);
+        document.getElementById('now').innerHTML = "Now playbackRate:" + (1 + Math.round(rate_counter*10)/10);
     });    
 }
 
@@ -17,7 +17,7 @@ function Rate_down_little(){
     rate_counter -= 0.1;
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         chrome.tabs.sendMessage(tabs[0].id, rate_counter);
-        document.getElementById('now').innerHTML = "Now playbackRate:" + (1 + rate_counter);
+        document.getElementById('now').innerHTML = "Now playbackRate:" + (1 + Math.round(rate_counter*10)/10);
     });    
 }
 
@@ -39,7 +39,7 @@ function Rate_up_much(){
     rate_counter += 0.5;
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         chrome.tabs.sendMessage(tabs[0].id, rate_counter);
-        document.getElementById('now').innerHTML = "Now playbackRate:" + (1 + rate_counter);
+        document.getElementById('now').innerHTML = "Now playbackRate:" + (1 + Math.round(rate_counter*10)/10);
     });    
 }
 
@@ -47,7 +47,7 @@ function Rate_down_much(){
     rate_counter -= 0.5;
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         chrome.tabs.sendMessage(tabs[0].id, rate_counter);
-        document.getElementById('now').innerHTML = "Now playbackRate:" + (1 + rate_counter);
+        document.getElementById('now').innerHTML = "Now playbackRate:" + (1 + Math.round(rate_counter*10)/10);
     });    
 }
 

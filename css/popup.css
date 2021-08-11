@@ -1,6 +1,6 @@
 body{
-    width: 400px;
-    height: 200px;
+    width: 380px;
+    height: 310px;
     margin: 0;
     padding: 0;
     background-image: url(/image/background.jpg);
@@ -11,36 +11,32 @@ body{
 }
 
 button{
-    display: inline;
-    height: 50px;
-    width: 28.5%;
-    box-shadow: -3px -3px rgb(85, 85, 85);
+    display: block;
+    float: left;
+    height: 55px;
+    width: calc(100% /3);
+    box-shadow: 3px 3px rgb(85, 85, 85);
     text-shadow: 0.5px 0.5px rgb(194, 187, 187);
     font-size: 15px;
     background-color: black;
     font-style: italic;
     color:white;
-    padding: 10px;
-    margin: 2%;
-    border-radius: 20%;
+    padding: 15px 10px 15px 10px;
+    /* margin: 1.5% 2% 2% 1.5%; */
+}
+
+.wrapper{
+    height: 165px;
 }
 
 button:active{
-    left:4px;
-    top:4px;
-    display: inline;
-    height: 50px;
-    width: 28%;
-    font-size: 15px;
-    background-color: black;
-    font-style: italic;
-    color:white;
-    padding: 10px;
-    margin: 1.5%;
-    border-radius: 20%;
+    box-shadow: none;
+    /* margin: 2% 1.5% 1.5% 2%; */
 }
 
 div , h1{
+    position: relative;
+    display: block;
     margin: 1.5%;
     font-size: 25px;
     padding: 10px;

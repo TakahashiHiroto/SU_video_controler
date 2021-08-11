@@ -7,3 +7,6 @@
 ※webclassのようにframeタグ内のdocumentオブジェクト内の要素をいじるときはcontentDocument or contentWindow.documentで指定しなくてはならない。[参照記事はこちら](https://shanabrian.com/web/javascript/element-contentdocument.php)
 
 ※複数のメッセージは送れる？(tabsを見た感じよくわからん。)ただjson形式で複数のデータを送り、content.js側でif文やらで場合分け→forEachとかで回せばいけそう？
+
+# SU_video_speed_controler
+![video_controler](/image/video_controler.png)
